@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="right|bottom"
-        android:text="1200*20*60"
         android:textColor="@color/white"
         android:textSize="9pt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,19 +24,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="5,760,000"
         android:textColor="@color/white"
         android:textSize="18pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_equation" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="#faa2a4" />
+
 
     <LinearLayout
         android:layout_width="0dp"
@@ -57,44 +50,18 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/eq"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="AC"
+                android:gravity="left"
+                android:layout_marginLeft="30sp"
+                android:text="="
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="equate"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="/"
-                android:textColor="@color/white"
-                android:textSize="10pt" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="X"
-                android:textColor="@color/white"
-                android:textSize="10pt" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="-"
-                android:textColor="@color/white"
-                android:textSize="10pt" />
 
 
         </LinearLayout>
@@ -106,6 +73,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/seven"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -113,9 +81,11 @@
                 android:gravity="center"
                 android:text="7"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="seven"/>
 
             <TextView
+                android:id="@+id/eight"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -123,9 +93,11 @@
                 android:gravity="center"
                 android:text="8"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="eight"/>
 
             <TextView
+                android:id="@+id/nine"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -133,8 +105,11 @@
                 android:gravity="center"
                 android:text="9"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="nine"/>
+
             <TextView
+                android:id="@+id/add"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -142,7 +117,8 @@
                 android:gravity="center"
                 android:text="+"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="plus"/>
 
         </LinearLayout>
 
@@ -153,6 +129,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/four"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -160,9 +137,11 @@
                 android:gravity="center"
                 android:text="4"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="four"/>
 
             <TextView
+                android:id="@+id/five"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -170,9 +149,11 @@
                 android:gravity="center"
                 android:text="5"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="five"/>
 
             <TextView
+                android:id="@+id/six"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -180,17 +161,20 @@
                 android:gravity="center"
                 android:text="6"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="six"/>
 
             <TextView
+                android:id="@+id/sub"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="%"
+                android:text="-"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="minus"/>
 
         </LinearLayout>
 
@@ -201,6 +185,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/one"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -208,9 +193,11 @@
                 android:gravity="center"
                 android:text="1"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="one"/>
 
             <TextView
+                android:id="@+id/two"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -218,9 +205,11 @@
                 android:gravity="center"
                 android:text="2"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="two"/>
 
             <TextView
+                android:id="@+id/three"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -228,16 +217,21 @@
                 android:gravity="center"
                 android:text="3"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="three"/>
+
             <TextView
+                android:id="@+id/mul"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="del"
+                android:text="X"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="multiply"/>
+
 
 
         </LinearLayout>
@@ -248,17 +242,10 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="00"
-                android:textColor="@color/white"
-                android:textSize="10pt" />
+
 
             <TextView
+                android:id="@+id/zero"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -266,30 +253,51 @@
                 android:gravity="center"
                 android:text="0"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="zero"/>
 
             <TextView
+                android:id="@+id/ac"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="."
+                android:text="AC"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="ac"/>
+
 
             <TextView
+                android:id="@+id/del"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="="
+                android:text="del"
                 android:textColor="@color/white"
-                android:textSize="10pt" />
+                android:textSize="10pt"
+                android:onClick="del"/>
+
+
+            <TextView
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="10pt"
+                android:onClick="divide"/>
+
 
 
         </LinearLayout>
+
 
 
     </LinearLayout>
